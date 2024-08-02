@@ -7,7 +7,7 @@ header.innerHTML = `
         <a href="index.html"
           ><img src="src/logo-nav.png" alt="Logo Corpus Memori"
         /></a>
-        <ul>
+        <ul class="desktop">
           <li><a href="news.html">News</a></li>
           <li>
             <span href="" id="piercing">
@@ -55,7 +55,56 @@ header.innerHTML = `
             </li>
           </ul>
         </ul>
+        <ul class="mobile">
+        <i class="fas fa-bars"></i> Menu
+        </ul>
       </nav>
+      <div class="hide-menu">
+      <div class="container">
+  <a href="news.html">News</a>
+
+  <span href=""> Piercing <i class="fas fa-caret-down"></i> </span>
+    <div class="der">
+    
+
+  <a
+    href="https://business.facebook.com/corpusmemoripiercing/shop/?rt=19&__cft__[0]=AZUs1IV6MnLqS5I6IDdl4324strUguTuPqS1TS7U7Dn8UWT47bM63RiQZc9J1ZST4DgLuyRygjjeTV-lEMdzwRZdEUlCD4RPILQfXqA7kT945RUTi-uj1EmX-vwrouSea02iYKYNGh4a5lIwZ34sAw0I&__tn__=-UK-R"
+    target="_blank"
+    ><i class="fas fa-circle"></i>Boutique</a
+  >
+  <a href="piercing.html"><i class="fas fa-circle"></i>Infos</a>
+  <a href="tarfis.html"><i class="fas fa-circle"></i>Tarifs</a>
+  </div>
+
+  <span> Tattoo <i class="fas fa-caret-down"></i> </span>
+  <div class="der">
+    <a href="tattoo.html"><i class="fas fa-circle"></i>Infos</a>
+    <a href="FAQ.html"><i class="fas fa-circle"></i>F.A.Q</a>
+    <a href="guests.html"><i class="fas fa-circle"></i>Guests</a>
+    <a href="residents.html"><i class="fas fa-circle"></i>Résidents</a>
+  </div>
+
+  <a href="contact.html" class="special">Contact</a>
+  <ul class="social">
+    <li>
+      <a href="https://www.facebook.com/corpusmemoripiercing/" target="_blank"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/corpusmemori/" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/corpusmemoripiercing/" target="_blank"
+        ><i class="fab fa-instagram"></i
+      ></a>
+    </li>
+  </ul>
+  </div>
+</div>
+
 `;
 
 footer.innerHTML = `
@@ -160,4 +209,12 @@ tattooSpan.addEventListener("click", () => {
 piercingSpan.addEventListener("click", () => {
   console.log("piercing");
   piercingDiv.classList.toggle("visible");
+});
+
+const hideMenu = document.querySelector(".hide-menu");
+const mobileButton = document.querySelector(".mobile");
+
+mobileButton.addEventListener("click", () => {
+  console.log("piercing");
+  hideMenu.classList.toggle("visible2");
 });

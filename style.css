@@ -25,6 +25,90 @@ html {
   background-repeat: repeat;
 }
 
+.desktop {
+  display: flex;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Hide */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.hide-menu {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid #ad9778;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+.hide-menu span,
+.hide-menu a {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  cursor: pointer;
+  font-family: "rafaella", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: #ad9778;
+}
+
+.hide-menu a:hover {
+  color: #ffffff;
+}
+
+.hide-menu span {
+  color: #ad9778;
+}
+
+.hide-menu div.der {
+  display: flex;
+  flex-direction: column;
+}
+
+html body header div.hide-menu div.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hide-menu div.der {
+  display: flex;
+  align-items: center;
+}
+
+.hide-menu div.der a {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.hide-menu div.der a:hover {
+  color: #ad9778;
+}
+
+.hide-menu div.der i {
+  color: #ad9778;
+  font-size: 6px;
+  margin-right: 8px;
+  margin-left: 0px;
+}
+
+.hide-menu span i {
+  color: #ad9778;
+  font-size: 16px;
+  margin-left: 8px;
+  margin-right: 0px;
+}
+
 /* Global */
 /* - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -253,6 +337,36 @@ header .social i {
 
 header .social i:hover {
   color: #ad9778;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 840px) {
+  header nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+    color: #ffffff;
+    margin-top: 24px;
+    cursor: pointer;
+
+    font-family: "rafaella", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    align-items: center;
+  }
+
+  .mobile i {
+    color: #ffffff;
+    margin-right: 8px;
+    color: #ad9778;
+    margin-top: -1px;
+  }
 }
 
 /* HEADER */
@@ -1555,4 +1669,16 @@ html body main section.page-container.page-contact article h2 {
 
 .hide {
   display: none;
+}
+
+.visible2 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 841px) and (max-width: 100000000000000000px) {
+  .visible2 {
+    display: none;
+    flex-direction: column;
+  }
 }
